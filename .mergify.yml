@@ -1,0 +1,34 @@
+pull_request_rules:
+  - name: automatic merge for Dependabot pull requests
+    conditions:
+      - author~=^dependabot(|-preview)\[bot\]$
+      - check-success=WIP
+      - check-success=ci (ubuntu-latest, 14)
+      - check-success=netlify/gracious-hamilton-49d614/deploy-preview
+    actions:
+      merge:
+        method: merge
+  - name: automatic merge for ImgBot pull requests
+    conditions:
+      - author=imgbot[bot]
+      - check-success=WIP
+      - check-success=ci (ubuntu-latest, 14)
+      - check-success=netlify/gracious-hamilton-49d614/deploy-preview
+    actions:
+      merge:
+        method: merge
+  - name: automatic merge Zalbani pull requests
+    conditions:
+      - author=Zalbani
+      - check-success=WIP
+      - check-success=ci (ubuntu-latest, 14)
+      - check-success=netlify/gracious-hamilton-49d614/deploy-preview
+    actions:
+      merge:
+        method: merge
+  - name: Automatic merge ⬇️ on approval ✔
+    conditions:
+      - "#approved-reviews-by>=1"
+    actions:
+      merge:
+        method: merge
