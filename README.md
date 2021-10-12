@@ -57,9 +57,7 @@ $ yarn generate
 
 ## Authors
 
-Alban Pierson – pro.pierson.alban@gmail.com
-
-[https://github.com/Zalbani/](https://github.com/Zalbani)
+Alban Pierson – pro.pierson.alban@gmail.com - [github : Zalbani](https://github.com/Zalbani)
 
 ## License
 
