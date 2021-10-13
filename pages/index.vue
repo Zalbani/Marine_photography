@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <main>
     <Hero />
-    <h1>Homme</h1>
-  </section>
+    <h1>Home</h1>
+  </main>
 </template>
 
 <script>

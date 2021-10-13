@@ -30,6 +30,10 @@
   font-family: "Garamond Bold Italic";
   src: url("fonts/Garamond/Garamond-BoldItalic.ttf") format("truetype");
 }
+body {
+  background-color: #F1F1EF;
+}
+
 /* Title/ STYLE */
 h1 {
   font-family: "Garamond Bold", serif;
@@ -172,6 +176,12 @@ hr {
   margin: 10px 0;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Lists style */
+ul {
+  list-style: none;
+  white-space: nowrap;
 }
 
 /* Display none */

@@ -7,7 +7,7 @@
 <script>
 export default {}
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .hero{
   width: 100%;
   height: 100vh;

@@ -53,6 +53,11 @@ export default {
       lang: 'fr'
     }
   },
+
+  router: {
+    linkExactActiveClass: 'exact-active-link'
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 }

@@ -1,4 +1,8 @@
 @import "fonts/fonts-loading.scss";
+
+body{
+  background-color: $bg-color;
+}
 /* Title/ STYLE */
 h1{
     font-family: 'Garamond Bold', serif;
@@ -134,6 +138,12 @@ hr{
     }
   }
 }
+/* Lists style */
+ul{
+  list-style: none;
+  white-space: nowrap;
+}
+
 /* Display none */
 .vanish{
   display: none!important;
