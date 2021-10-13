@@ -1,0 +1,27 @@
+@import "variables";
+@import "default-style";
+
+// Animation transition page
+.opacity-enter-active{
+  animation: opacity-in .6s;
+}
+.opacity-leave-active {
+  animation: opacity-out .3s;
+}
+
+@keyframes opacity-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes opacity-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
