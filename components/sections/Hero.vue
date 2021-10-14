@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <h1>Photographe de portrait basée à Belfort</h1>
-    <btn> Voir le portfolio</btn>
+    <button> Voir le portfolio</button>
   </section>
 </template>
 <script>
@@ -22,6 +22,11 @@ export default {}
     bottom: 20vh;
     text-align: center;
     color: white;
+  }
+  button{
+    position: absolute;
+    bottom: 10vh;
+    text-align: center;
   }
 }
 </style>

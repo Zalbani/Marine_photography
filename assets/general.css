@@ -48,29 +48,33 @@ h1 {
 }
 
 h2 {
-  font-family: "Garamond Bold", sans-serif;
+  font-family: "Garamond Bold", serif;
   font-size: 30px;
   line-height: 40px;
 }
 
 h3 {
-  font-family: "Garamond Bold", sans-serif;
-  font-size: 25px;
-  line-height: 35px;
+  font-family: "Garamond", serif;
+  font-weight: unset;
+  font-size: 27px;
+  line-height: 37px;
 }
 
 h4, h5, h6 {
-  font-family: "Garamond Bold", sans-serif;
+  font-family: "Garamond Italic", serif;
+  font-weight: unset;
   font-size: 20px;
   line-height: 30px;
+  margin: unset;
 }
 
 /* Text style */
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   color: black;
+  margin: unset;
 }
 @media only screen and (max-width: 960px) {
   p {
@@ -109,10 +113,10 @@ p.admin-big {
 /* Link style*/
 a, button {
   text-decoration: none;
-  font-family: "Montserrat Bold", sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  color: #ff645f;
+  font-family: "Garamond", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: black;
 }
 @media only screen and (max-width: 960px) {
   a, button {
@@ -161,9 +165,9 @@ a, button {
 
 hr {
   border: none;
-  height: 2px;
-  margin: 10px 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  background-color: black;
+  margin: 17px;
 }
 
 /* Formulaire style */
@@ -182,6 +186,8 @@ hr {
 ul {
   list-style: none;
   white-space: nowrap;
+  padding: unset;
+  margin: unset;
 }
 
 /* Display none */
