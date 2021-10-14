@@ -71,52 +71,30 @@ p{
 /* Link style*/
 a, button{
   text-decoration: none;
-  font-family: 'Garamond', sans-serif;
+  font-family: 'Garamond Bold', sans-serif;
   font-size: 20px;
-  line-height: 28px;
-  color: black;
+  line-height: 30px;
+  fill: inherit;
+  color: inherit;
   @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
     font-size: 18px;
     line-height: 28px;
   }
 }
 /* Button style */
-.button{
+button{
   z-index: 2;
-  padding: 10px 30px;
-  background-color: $secondary;
-  color: white;
-  border-radius: 10px;
+  padding: 20px 30px;
+  background-color: $primary;
+  border: 1px solid black;
+  color: black;
   position: relative;
   text-align: center;
-  &::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    background-color: $secondary;
-    opacity: 0.35;
-    z-index: -1;
-    border-radius: 10px;
-    transform: rotate(0);
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-  }
+  transition: 0.5s;
   &:hover{
-    &::after{
-      transform: rotate(5deg);
-    }
-  }
-  &.primary{
-    background-color: $primary;
-    &::after {
-      background-color: $primary;
-    }
-  }
-  .large{
-    padding: 10px 10%;
+    border-color: $primary;
+    background-color: white;
+    color: $primary;
   }
 }
 

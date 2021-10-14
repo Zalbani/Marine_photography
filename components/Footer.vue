@@ -59,24 +59,25 @@
           </nuxt-link>
         </li>
       </ul>
+      <socials-color />
     </section>
   </footer>
 </template>
 <script>
 export default {
-
 }
 </script>
 <style lang="scss" scoped>
 .footer {
   width: calc(100% - 16vw);
-  padding: 0 8vw;
+  padding: 20px 8vw 0 8vw;
   &__topInfo{
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    padding-bottom: 17px;
+    padding-bottom: 20px;
+    text-align: center;
     h3{
       margin-top: unset;
     }
@@ -91,16 +92,28 @@ export default {
     align-content: center;
     justify-content: flex-start;
     width: 100%;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+      flex-direction: column;
+    }
     ul {
       display: inherit;
       flex-direction: column;
-      width: 25%;
-      padding: 17px;
+      width: calc(25% - 40px);
+      padding: 20px;
+      @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+        width: calc(100% - 20px);
+        padding: 10px;
+      }
       li {
-        margin: 1rem 0;
+        margin: 0.75rem 0;
         text-decoration: underline;
         text-underline-offset: .2em;
         text-decoration-thickness: 1px;
+        &:first-of-type a{
+          font-size: 24px;
+          line-height: 34px;
+          color: $primary;
+        }
       }
     }
   }
