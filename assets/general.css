@@ -19,6 +19,10 @@
   src: url("fonts/Garamond/Garamond-Regular.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Garamond Light";
+  src: url("fonts/Garamond/Garamond-Light.ttf") format("truetype");
+}
+@font-face {
   font-family: "Garamond Bold";
   src: url("fonts/Garamond/Garamond-Bold.ttf") format("truetype");
 }
@@ -177,6 +181,11 @@ ul {
 
 .show {
   display: initial !important;
+}
+
+/* Smooth Transition */
+svg {
+  transition: 0.5s;
 }
 
 .opacity-enter-active {

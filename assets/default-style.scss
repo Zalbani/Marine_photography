@@ -135,3 +135,8 @@ ul{
 .show {
   display: initial!important;
 }
+
+/* Smooth Transition */
+svg{
+  transition: 0.5s;
+}
