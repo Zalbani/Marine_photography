@@ -1,10 +1,12 @@
 <template>
   <header>
-    <socials-color class="socials" :base-color="getSocialsBaseColor" />
-    <nuxt-link to="/" class="home">
+    <div class="hamburger" @click="menuActive = !menuActive" />
+    <nuxt-link to="/" :class="['home', {'home--black':menuActive}]">
       Marine de stefano
     </nuxt-link>
-    <nav>
+    <nav :class="{menuActive : menuActive}">
+      <socials-color class="socials socials-pc" base-color="white" />
+      <socials-color class="socials socials--mobile" base-color="black" />
       <ul>
         <li>
           <nuxt-link to="/mon-travail">
@@ -29,14 +31,9 @@
 import SocialsColor from '~/components/socials/socials-color'
 export default {
   components: { SocialsColor },
-  computed: {
-    getSocialsBaseColor () {
-      if (process.client) {
-        const width = window.innerWidth
-        return (width < 960 ? 'black' : 'white')
-      } else {
-        return 'red'
-      }
+  data () {
+    return {
+      menuActive: false
     }
   }
 }
@@ -47,8 +44,6 @@ header {
   width: 100%;
   top: 0;
   z-index: 1;
-  background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,18 +51,94 @@ header {
   align-content: center;
   flex-wrap: nowrap;
   color: white;
-  @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-    position: fixed;
-    width: 100%;
-    padding: 0;
-    height: 100vh;
-    background-color: white;
-    color: black;
-    z-index: 10;
+  .hamburger{
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    display: none;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+      display: block;
+    }
   }
+
+  .home{
+    z-index: 20;
+    color: white;
+    margin: 1.5vw 0;
+    text-transform: uppercase;
+    font-family: "Garamond", sans-serif;
+    font-size: 2rem;
+    line-height: 1.4rem;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      text-align: left;
+    }
+    &--black{
+      color: black;
+    }
+  }
+  .socials{
+    z-index: 20;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+      display: none;
+      top: unset;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &--pc{
+      display: flex;
+      @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+        display: none;
+      }
+    }
+    &--mobile{
+      display: none;
+      @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+        display: flex;
+      }
+    }
+  }
+
   nav {
-    width: inherit;
-    margin: 15px 0;
+    width: 100%;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
+      position: fixed;
+      top: 0;
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      height: 100vh;
+      background-color: white;
+      color: black;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s, opacity 0.5s linear;
+      &.menuActive {
+        visibility: visible;
+        opacity: 1;
+        .socials{
+          display: flex;
+        }
+      }
+    }
     ul {
       display: flex;
       flex-direction: row;
@@ -90,32 +161,24 @@ header {
     }
   }
 
-  .home{
-    color: inherit;
-    margin: 1.5vw 0;
-    text-transform: uppercase;
-    font-family: "Garamond", sans-serif;
-    font-size: 2rem;
-    line-height: 1.4rem;
-    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      text-align: left;
-    }
+}
+@keyframes fadein {
+  from {
+    opacity:0;
   }
-  .socials{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-      top: unset;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  to {
+    opacity:1;
+  }
+}
 
+@keyframes fadeout {
+  from {
+    display: flex!important;
+    opacity:1;
+  }
+  to {
+    display: none;
+    opacity:0;
   }
 }
 </style>

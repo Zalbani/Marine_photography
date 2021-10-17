@@ -132,7 +132,6 @@ a, button {
 
 /* Button style */
 button {
-  z-index: 2;
   padding: 20px 30px;
   background-color: #C8A47E;
   border: 1px solid black;
