@@ -126,6 +126,9 @@ ul{
   white-space: nowrap;
   padding: unset;
   margin: unset;
+  li{
+    display: flex;
+  }
 }
 
 /* Display none */

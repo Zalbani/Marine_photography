@@ -173,6 +173,9 @@ ul {
   padding: unset;
   margin: unset;
 }
+ul li {
+  display: flex;
+}
 
 /* Display none */
 .vanish {
