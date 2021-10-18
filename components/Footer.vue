@@ -8,7 +8,7 @@
     </div>
     <hr>
     <section class="footer__link">
-      <ul>
+      <ul class="footer__linkTable">
         <li>
           <nuxt-link to="/mon-travail">
             Mon travail
@@ -45,21 +45,21 @@
           </nuxt-link>
         </li>
       </ul>
-      <ul>
+      <ul class="footer__linkTable">
         <li>
           <nuxt-link to="/a-propos">
             À propos
           </nuxt-link>
         </li>
       </ul>
-      <ul>
+      <ul class="footer__linkTable">
         <li>
           <nuxt-link to="/contact">
             Contact
           </nuxt-link>
         </li>
       </ul>
-      <socials-color />
+      <socials-color class="footer__linkSocial" />
     </section>
   </footer>
 </template>
@@ -95,8 +95,7 @@ export default {
     @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
       flex-direction: column;
     }
-    ul {
-      display: inherit;
+    &Table {
       flex-direction: column;
       width: calc(25% - 40px);
       padding: 20px;
@@ -115,6 +114,10 @@ export default {
           color: $primary;
         }
       }
+    }
+    &Social {
+      width: calc(25% - 40px);
+      padding: 20px;
     }
   }
 }
