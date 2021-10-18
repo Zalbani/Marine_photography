@@ -1,24 +1,28 @@
 <template>
-  <header>
-    <div class="hamburger" @click="menuActive = !menuActive" />
-    <nuxt-link to="/" :class="['home', {'home--black':menuActive}]">
+  <header :class="{'header--lightBg': isLightBG}">
+    <div :class="['hamburger', 'hamburger--spring', {'is-active':menuActive}]" type="button" @click="toggleMenu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner" />
+      </span>
+    </div>
+    <nuxt-link to="/" :class="['home', {'home--mobileBlack':menuActive}]">
       Marine de stefano
     </nuxt-link>
     <nav :class="{menuActive : menuActive}">
-      <socials-color class="socials socials-pc" base-color="white" />
+      <socials-color class="socials socials-pc" :base-color="setSocialsColorPc" />
       <socials-color class="socials socials--mobile" base-color="black" />
       <ul>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/mon-travail">
             Mon travail
           </nuxt-link>
         </li>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/a-propos">
             À propos
           </nuxt-link>
         </li>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/contact">
             Contact
           </nuxt-link>
@@ -34,6 +38,23 @@ export default {
   data () {
     return {
       menuActive: false
+    }
+  },
+  computed: {
+    isLightBG () {
+      return this.$store.state.isLightBG
+    },
+    setSocialsColorPc () {
+      if (this.$store.state.isLightBG) {
+        return 'black'
+      } else {
+        return 'white'
+      }
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.menuActive = !this.menuActive
     }
   }
 }
@@ -54,20 +75,19 @@ header {
   .hamburger{
     z-index: 20;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: red;
+    top: 25px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     display: none;
     @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-      display: block;
+      display: inline-block;
     }
   }
 
   .home{
     z-index: 20;
-    color: white;
+    color: inherit;
     margin: 1.5vw 0;
     text-transform: uppercase;
     font-family: "Garamond", sans-serif;
@@ -79,8 +99,10 @@ header {
       left: 10px;
       text-align: left;
     }
-    &--black{
-      color: black;
+    &--mobileBlack{
+      @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
+        color: black;
+      }
     }
   }
   .socials{
@@ -97,15 +119,15 @@ header {
       transform: translateX(-50%);
     }
     &--pc{
-      display: flex;
+      visibility: visible;
       @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-        display: none;
+        visibility: hidden;
       }
     }
     &--mobile{
-      display: none;
+      visibility: hidden;
       @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
-        display: flex;
+        visibility: visible;
       }
     }
   }
@@ -161,6 +183,12 @@ header {
     }
   }
 
+  &.header--lightBg{
+    color: black;
+    .hamburger-inner, .hamburger-inner::before{
+      background-color: black;
+    }
+  }
 }
 @keyframes fadein {
   from {

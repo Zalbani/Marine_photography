@@ -7,6 +7,9 @@
 <script>
 import Hero from '~/components/sections/Hero'
 export default {
-  components: { Hero }
+  components: { Hero },
+  fetch () {
+    this.$store.commit('setIsLightBG', false)
+  }
 }
 </script>
