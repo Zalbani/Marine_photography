@@ -1,5 +1,7 @@
 <template>
-  <p>Mon travail</p>
+  <main>
+    <p>Mon travail</p>
+  </main>
 </template>
 <script>
 export default {

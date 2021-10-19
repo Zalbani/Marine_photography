@@ -13,6 +13,8 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .hero{
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100vh;
   padding-bottom: 10vh;

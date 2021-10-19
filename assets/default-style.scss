@@ -130,6 +130,13 @@ ul{
   }
 }
 
+/* Main */
+main{
+  background-color: white;
+  min-height: calc(100vh - 140px);
+  padding-top: 140px;
+}
+
 /* Display none */
 .vanish{
   display: none!important;
@@ -141,4 +148,12 @@ ul{
 /* Smooth Transition */
 svg{
   transition: 0.5s;
+}
+
+/* Image */
+img{
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
 }
