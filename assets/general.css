@@ -178,7 +178,6 @@ ul li {
 
 /* Main */
 main {
-  background-color: white;
   min-height: calc(100vh - 140px);
   padding-top: 140px;
 }

@@ -69,6 +69,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
+  background-color: $bg-color;
   width: calc(100% - 16vw);
   padding: 20px 8vw 0 8vw;
   &__topInfo{

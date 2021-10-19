@@ -28,6 +28,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .project{
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-content: center;
