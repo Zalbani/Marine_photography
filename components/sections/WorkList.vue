@@ -2,32 +2,32 @@
   <ul class="WorkList">
     <div class="WorkList__background" :style="{ backgroundImage: `url(${backgroundUrl})` }" />
     <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_3.jpg')" @mouseleave="resetImageUrl">
-      <nuxt-link to="/">
+      <nuxt-link to="/project">
         Oceane
       </nuxt-link>
     </li>
     <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_1.jpg')" @mouseleave="resetImageUrl">
-      <nuxt-link to="/">
+      <nuxt-link to="/project">
         Mathias
       </nuxt-link>
     </li>
     <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_2.jpg')" @mouseleave="resetImageUrl">
-      <nuxt-link to="/">
+      <nuxt-link to="/project">
         Evah
       </nuxt-link>
     </li>
-    <li class="WorkList__item">
-      <nuxt-link to="/">
+    <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_4.jpg')" @mouseleave="resetImageUrl">
+      <nuxt-link to="/project">
         Maeva X circe
       </nuxt-link>
     </li>
-    <li class="WorkList__item">
-      <nuxt-link to="/">
+    <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_5.jpg')" @mouseleave="resetImageUrl">
+      <nuxt-link to="/project">
         Willy
       </nuxt-link>
     </li>
-    <li class="WorkList__item">
-      <nuxt-link to="/">
+    <li class="WorkList__item" @mouseover="setBackgroundUrl('/image/project/oceane_6.jpg')" @mouseleave="resetImageUrl">
+      <nuxt-link to="/project">
         Deborah
       </nuxt-link>
     </li>
