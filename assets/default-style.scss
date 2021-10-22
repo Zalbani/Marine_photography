@@ -4,6 +4,11 @@ body{
   background-color: $bg-color;
 }
 /* Title/ STYLE */
+/* Reset title styles */
+h1,h2,h3,h4,h5,h6{
+  font-weight: unset;
+}
+
 h1{
     font-family: 'Garamond Bold', serif;
     font-size: 50px;
@@ -20,16 +25,13 @@ h2{
 }
 h3{
   font-family: 'Garamond', serif;
-  font-weight: unset;
   font-size: 27px;
   line-height: 37px;
 }
 h4, h5, h6{
   font-family: 'Garamond Italic', serif;
-  font-weight: unset;
   font-size: 20px;
   line-height: 30px;
-  margin: unset;
 }
 
 /* Text style */
@@ -98,10 +100,11 @@ button{
 }
 
 hr{
+  width: 100%;
   border: none;
   height: 1px;
   background-color: black;
-  margin: 17px;
+  margin: 17px 0;
 }
 
 /* Formulaire style */
