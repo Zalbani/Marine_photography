@@ -22,9 +22,20 @@ export default {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
+  @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
+    flex-wrap: wrap;
+  }
+  @media only screen and (max-width: map-get($grid-breakpoints, 'sm')) {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
   &__info, &__form{
     width: calc(50% - 80px);
     padding: 40px;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
   }
 
 }

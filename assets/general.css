@@ -118,6 +118,7 @@ p.admin-big {
 
 /* Link style*/
 a, button {
+  transition: 0.5s;
   text-decoration: none;
   font-family: "Garamond Bold", sans-serif;
   font-size: 20px;
@@ -132,17 +133,25 @@ a, button {
   }
 }
 
+a:hover, a.nuxt-link-active {
+  color: #C8A47E;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  text-decoration: underline;
+}
+
 /* Button style */
-button {
+button, .button {
+  text-decoration: none !important;
   padding: 20px 30px;
   background-color: #C8A47E;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid white;
+  color: white;
   position: relative;
   text-align: center;
   transition: 0.5s;
 }
-button:hover {
+button:hover, .button:hover {
   border-color: #C8A47E;
   background-color: white;
   color: #C8A47E;

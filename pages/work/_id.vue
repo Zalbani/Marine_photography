@@ -1,7 +1,7 @@
 <template>
   <main class="project">
     <p class="project__date">
-      2020
+      2020 - {{ id }}
     </p>
     <h2 class="project__title">
       Titre
@@ -10,17 +10,22 @@
       description
     </p>
     <ul class="project__imageGrid">
-      <li><img src="/image/project/oceane_1.jpg"></li>
-      <li><img src="/image/project/oceane_2.jpg"></li>
-      <li><img src="/image/project/oceane_3.jpg"></li>
-      <li><img src="/image/project/oceane_4.jpg"></li>
-      <li><img src="/image/project/oceane_5.jpg"></li>
-      <li><img src="/image/project/oceane_6.jpg"></li>
+      <li><img src="/images/work/oceane_1.jpg"></li>
+      <li><img src="/images/work/oceane_2.jpg"></li>
+      <li><img src="/images/work/oceane_3.jpg"></li>
+      <li><img src="/images/work/oceane_4.jpg"></li>
+      <li><img src="/images/work/oceane_5.jpg"></li>
+      <li><img src="/images/work/oceane_6.jpg"></li>
     </ul>
   </main>
 </template>
 <script>
 export default {
+  data () {
+    return {
+      id: this.$route.params.id
+    }
+  },
   fetch () {
     this.$store.commit('setIsLightBG', true)
   }

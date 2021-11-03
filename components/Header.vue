@@ -13,7 +13,7 @@
       <socials-color class="socials socials--mobile" base-color="black" />
       <ul>
         <li @click="toggleMenu">
-          <nuxt-link to="/mon-travail">
+          <nuxt-link to="/work">
             Mon travail
           </nuxt-link>
         </li>
@@ -87,19 +87,22 @@ header {
 
   .home{
     z-index: 20;
-    color: inherit;
     margin: 1.5vw 0;
     text-transform: uppercase;
     font-family: "Garamond", sans-serif;
     font-size: 2rem;
     line-height: 1.4rem;
+    color: inherit;
+    text-decoration: none;
     @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
       position: absolute;
-      top: 20px;
-      left: 10px;
+      top: 15px;
+      left: 15px;
       text-align: left;
+      font-size: 1.4rem;
+      line-height: normal;
     }
-    &--mobileBlack{
+      &--mobileBlack{
       @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
         color: black;
       }
@@ -173,7 +176,6 @@ header {
       }
       li a {
         margin: 0 1.25vw;
-        color: inherit;
         @media only screen and (max-width: map-get($grid-breakpoints, 'md')){
           margin: 3vw 5vw;
           font-size: 6.6vmin;

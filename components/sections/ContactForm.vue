@@ -11,7 +11,23 @@
     <hr>
     <label>Lieu</label>
     <input type="text">
-    <select />
+
+    <fieldset>
+      <legend>Quel(s) service(s) recherchez-vous ? </legend>
+      <label><input type="checkbox" value="hello"> test</label>
+    </fieldset>
+    <label>Comment avez-vous entendu parler de moi ?</label>
+    <select>
+      <option>Amis</option>
+      <option>Famille</option>
+      <option>Site web</option>
+      <option>Google</option>
+      <option>Intstagram</option>
+      <option>Facebook</option>
+      <option>Publicite</option>
+      <option>Pinterest</option>
+    </select>
+
     <button type="submit">
       Envoyer
     </button>
@@ -35,6 +51,9 @@ export default {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid lightgrey;
+  }
+  button{
+    margin: 20px 0;
   }
 }
 

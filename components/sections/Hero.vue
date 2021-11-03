@@ -1,11 +1,9 @@
 <template>
   <section class="hero">
     <h1>Photographe de portrait basée à Belfort</h1>
-    <button>
-      <nuxt-link to="/mon-travail">
-        Voir le portfolio
-      </nuxt-link>
-    </button>
+    <nuxt-link to="/work" class="button">
+      Voir le portfolio
+    </nuxt-link>
   </section>
 </template>
 <script>
@@ -19,7 +17,7 @@ export default {}
   height: 100vh;
   padding-bottom: 10vh;
   box-sizing: border-box;
-  background-image: url("/image/oceane.jpg");
+  background-image: url("/images/oceane.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

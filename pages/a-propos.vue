@@ -20,7 +20,7 @@
         Mes prestations s’adressent aux particuliers comme aux professionnels, chaque projet est unique et original et je serai ravie de le mener à bien avec vous.
       </p>
     </div>
-    <img class="about__image" src="/image/marine.jpg">
+    <img class="about__image" src="/images/marine.jpg">
   </main>
 </template>
 <script>

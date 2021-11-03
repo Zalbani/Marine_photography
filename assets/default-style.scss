@@ -72,6 +72,7 @@ p{
 
 /* Link style*/
 a, button{
+  transition: 0.5s;
   text-decoration: none;
   font-family: 'Garamond Bold', sans-serif;
   font-size: 20px;
@@ -83,12 +84,21 @@ a, button{
     line-height: 28px;
   }
 }
+a{
+  &:hover, &.nuxt-link-active{
+    color: $primary;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    text-decoration: underline;
+  }
+}
 /* Button style */
-button{
+button, .button{
+  text-decoration: none!important;
   padding: 20px 30px;
   background-color: $primary;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid white;
+  color: white;
   position: relative;
   text-align: center;
   transition: 0.5s;

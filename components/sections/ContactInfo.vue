@@ -1,6 +1,6 @@
 <template>
   <section class="contactInfo">
-    <img src="/image/marine.jpg" class="contactInfo__image">
+    <img src="/images/marine.jpg" class="contactInfo__image">
     <div class="contactInfo__description">
       <h2>Contact</h2>
       <hr>
@@ -20,15 +20,23 @@ export default {}
   &__image{
     width: 70%;
     padding: 0 20% 0 10%;
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
+      width: 100%;
+      padding: 20px 0;
+    }
   }
   &__description{
     position: absolute;
-    top: 25%;
-    width: 40%;
-    left: 50%;
+    top: 60%;
+    width: 55%;
+    left: 35%;
     padding: 25px;
     background-color: white;
-    h2{
+    @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
+      width: calc(100% - 50px);
+      position: unset;
+    }
+      h2{
       font-family: "Garamond", serif;
       font-size: 42px;
     }

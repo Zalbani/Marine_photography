@@ -10,37 +10,37 @@
     <section class="footer__link">
       <ul class="footer__linkTable">
         <li>
-          <nuxt-link to="/mon-travail">
+          <nuxt-link to="/work">
             Mon travail
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/1">
             Océane
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/2">
             Mathias
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/3">
             Evah
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/4">
             Maeva x Circé
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/5">
             Willy
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/work/6">
             Déborah
           </nuxt-link>
         </li>
@@ -106,10 +106,14 @@ export default {
       }
       li {
         margin: 0.75rem 0;
-        text-decoration: underline;
-        text-underline-offset: .2em;
-        text-decoration-thickness: 1px;
+        a{
+          text-decoration: none;
+          color: black;
+        }
         &:first-of-type a{
+          text-decoration: underline;
+          text-underline-offset: 10px;
+          text-decoration-thickness: 2px;
           font-size: 24px;
           line-height: 34px;
           color: $primary;
