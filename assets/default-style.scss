@@ -118,20 +118,48 @@ hr{
 }
 
 /* Formulaire style */
-.custom-form{
-  form {
-    label {
-      display: none;
+form {
+  label{
+    font-family: "Montserrat", sans-serif;
+  }
+  input, textarea{
+    box-sizing: border-box;
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    resize: none;
+  }
+  select{
+    display: block;
+    margin: 10px 0;
+    width: 40%;
+    padding: 4px 2px;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+  .inputWrapper, fieldset{
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .inputCheckboxWrapper{
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+    input{
+      width: auto;
+      margin: 5px 10px 5px 0;
+      cursor: inherit;
     }
-    input {
-      width: 100%;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+    label{
+      cursor: inherit;
     }
   }
 }
+
 /* Lists style */
 ul{
   list-style: none;
