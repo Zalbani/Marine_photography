@@ -136,8 +136,7 @@ a, button {
 a:hover, a.nuxt-link-active {
   color: #C8A47E;
   text-underline-offset: 10px;
-  text-decoration-thickness: 2px;
-  text-decoration: underline;
+  text-decoration: underline 2px;
 }
 
 /* Button style */
@@ -145,7 +144,7 @@ button, .button {
   text-decoration: none !important;
   padding: 20px 30px;
   background-color: #C8A47E;
-  border: 1px solid white;
+  border: 1px solid transparent;
   color: white;
   position: relative;
   text-align: center;

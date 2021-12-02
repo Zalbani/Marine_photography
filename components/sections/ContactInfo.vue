@@ -19,17 +19,16 @@ export default {}
   position: relative;
   &__image{
     width: 70%;
-    padding: 0 20% 0 10%;
+    padding: 15% 20% 0 10%;
     @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
-      width: 100%;
-      padding: 20px 0;
+      display: none;
     }
   }
   &__description{
     position: absolute;
-    top: 60%;
-    width: 55%;
-    left: 35%;
+    top: 40px;
+    width: 50%;
+    left: 40%;
     padding: 25px;
     background-color: white;
     @media only screen and (max-width: map-get($grid-breakpoints, 'md')) {
